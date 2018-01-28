@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Sample Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Version control system</h1>
+              <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+              <span class="meta">Posted by
+                <a href="#">Jacob Okoro</a>
+                on August 24, 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          <h3>Version control system</h3>
+             A version control system is a system that records changes overtime so that you can recall specific versions later.<br><br>
+
+              For example if you are a web designer, and find yourself in any of these situations:
+              <ul>
+              <li>You like a particular design layout. And you don’t want future changes to mess with your current design</li>
+              <li>You go with a design pattern and find down the road that, it may be flawed,
+              In  situations like these, It is smart to use a version control system as they allow you to revert the selected files back to previous state(or even the entire project), compare changes overtime, or even see where the error was introduced.</li>
+              </ul>
+<br>
+              <p>
+              It also finds use for people who collaborate towards an open source project from any part of the world as it allows them to make changes to  software and merge them together in the end, even if they are worlds apart. GIT here, allows you to see who last modified something that might be causing an issue and when.<br>
+              In short, Using a VCS also generally means that if you screw things up or lose files, you can easily recover.
+              </p>
+
+              <p>
+                <ul>
+                  <li>Centralized VCS ,eg: SVN</li>
+                  <li>Distributed VCS ,eg: GIT  </li>
+                  <li>Local vcs </li>
+                </ul>
+              </p>
+              <p>
+              <h5>Central VCS </h5> 
+              Centralized version control system (CVCS) uses a central server to store all files and enables team collaboration. It works on a single repository to which users can directly access a central server.
+              Here, every programmer can extract and update their workstations with the data present in the repository or can make changes to the data. Every operation is performed directly on the repository.
+              It has some major drawbacks. Some of them are:
+                <ul>
+                  <li> You always need network connection to perform any action or changes, because it is not locally available.</li>
+                  <li>Due to its centralization, if the central server is crashed or corrupted, The entire data in the project will be lost.</li>
+                </ul>
+              </p>
+              <p>
+                <h5> Distributed version control system</h5>
+                 These systems do not necessarily rely on a central server to store all the versions of a project file.
+                 In Distributed VCS, every contributor has a local copy or “clone” of the main repository i.e. everyone maintains a local repository of their own which contains all the files and metadata present in the main repository.
+              </p>
+             <p>  
+              As you can see in the above diagram, every programmer maintains a local repository on its own, which is actually the copy or clone of the central repository on their hard drive. They can commit and update their local repository without any interference.<br>
+              They can update their local repositories with new data from the central server by an operation called “pull” and affect changes to the main repository by an operation called “push” from their local repository.
+             </p>
+             <p>
+              The act of cloning an entire repository into your workstation to get a local repository gives you the following advantages:
+               <ul>
+                 <li>All operations (except push & pull) are very fast because the tool only needs to access the hard drive, not a remote server. Hence, you do not always need an internet connection.</li>
+                 <li>Committing new change-sets can be done locally without manipulating the data on the main repository. Once you have a group of change-sets ready, you can push them all at once.</li>
+                 <li>Since every contributor has a full copy of the project repository, they can share changes with one another if they want to get some feedback before affecting changes in the main repository.</li>
+                 <li>If the central server gets crashed at any point of time, the lost data can be easily recovered from any one of the contributor’s local repositories.</li>
+               </ul>
+             </p>
+            
+            <p>
+              <h5>Local Version Control Systems</h5>
+              Many people’s version-control method (including mine ) of choice is to copy files into another directory . This approach is very common and simple. But has its disadvantages:
+              <ul>
+                <li>It is easy to forget which directory you’re in and accidentally write to the wrong file or copy over files you don’t mean to (I’ve been there) . </li>
+                <li>If your system crashes, and you have no back up, your entire project is gone.</li>
+                <li>It only allows a single user to collaborate</li>
+              </ul>
+            </p>
+             
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>

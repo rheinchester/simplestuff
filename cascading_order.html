@@ -1,3 +1,5 @@
+
+<!-- Please put this blog in layman terms -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,84 +55,49 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Clean Blog</h1>
-              <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            <div class="post-heading">
+              <h1>Cascading order in css</h1>
+              <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+              <span class="meta">Posted by
+                <a href="#">Jacob Okoro</a>
+                on August 24, 2017</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Science has not yet mastered prophecy
-              </h2>
-              <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2017</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>
+            <h1 style="color: red">Please put this blog in layman terms</h1>
+            <h4>Cascading Order</h4>
+            The term “cascading” refers to the hierarchical order in which different style sheet types interact when conflicts arise. Style sheets cascade in this order (4 having the highest priority):
+            <ol>
+              <li> Browser Defaults</li>
+              <li>External Style Sheets (Linked or Imported)</li>
+              <li>Internal Style Sheets (Embedded)</li>
+              <li>Inline Styles</li>
+            </ol> 
+            This list could be summed up into one basic rule: If two styles come into conflict, the last one used will take precedence. Does that sound a little contradictory to the cascading order list? Allow me to explain the rule:
+            <ul>
+              <li>Inline styles must be placed in the body of the HTML document, while embedded style sheets must be placed in the head of the HTML document. As a result, inline styles are always the last ones used and therefore take precedence.</li>
+              <li>The browser treats all external style sheets as occurring before internal style sheets, regardless of where the link is placed. For example, if you place your linked style sheet after your embedded style sheet, the browser would still view the linked style sheet as occurring before the embedded sheet because it is an external style sheet. Therefore, internal style sheets are always a higher priority than external because they occur later in the document (according to the browser). </li>
+            </ul>
+            For those reasons, we can sum up the cascading order list with that one rule.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </article>
 
     <hr>
 
@@ -170,7 +137,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

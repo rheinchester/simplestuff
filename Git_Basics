@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Git basics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Simple developer</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Sample Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>How to use Git</h1>
+              <h2 class="subheading">Command line basics.</h2>
+              <span class="meta">Posted by
+                <a href="#">Jacob okoro</a>
+                on August 24, 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h4>This tutorial is useful for</h4>
+            <ul>
+              <li>Those who haven’t used  version control before</li>
+              <li>Those who have used git GUI but not command line</li>
+            </ul>
+
+            <p>Git is a type of <a href="">version control system</a> called Distributed version control system
+            </p>
+<!-- 
+            <h2 class="section-heading">The Final Frontier</h2>
+            <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+
+            <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+
+            <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+
+            <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+
+            <h2 class="section-heading">Reaching for the Stars</h2>
+
+            <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+ -->
+            <h4>Before we begin</h4>
+            <ul>
+              <li>Register for<a href=""> Github here</a></li>
+              <li>Download  <a href=""> GIT here.</a></strong></li>
+            </ul>
+            <p>After you have installed git, check the version using this command</p>
+            <code> git --version</code>
+            <p>The following will appear</p>
+              <img class="img-fluid" src="img/git_basics/git_version.JPG" alt="">
+            <p>Once the version appears it means it was installed correctly.</p>
+            <p>
+                Now, we need to set up some global configuration variables.
+                This way, if you are working with other developers, they get to see who is making the changes.
+            </p>
+            <p> To add your full name to the config type in<br>
+            <code>  git config --global user.name "full name"</code> </p>
+            <p> To add your email <br> <code> git config --global user.name "email" </code> <br>
+            </p>
+            <p>
+                To view  details type<br> <code> git config --list</code> <br>
+            </p>
+            <p> 
+              Here's an illustration
+              <img class="img-fluid" src="img/git_basics/git_config2.JPG" alt="">
+            </p>
+              The username and email are circled red.
+
+            <p>
+              <h5>Getting help</h5>
+               If you need help with any of the syntax and want to know more about it, Use:
+               <code>Git help "verb"</code>
+               For example when I typed this
+               <img class="img-fluid" src="img/git_basics/git_help_pushDemo.JPG" >
+               <br>
+            </p>
+            <p>
+               I saw this
+               <img  class="img-fluid" src="img/git_basics/git_help_push.JPG" >
+            </p>
+            <p>
+              <h5>Some common operations we'll be working with are:</h5>
+              <ul>
+                <li> Git status</li>
+                <li> Git add </li>
+                <li> Git pull</li>
+                <li> Git push</li>
+                <li> Git log</li>
+              </ul>
+              For more information you can use the git help to view the documentation
+            </p>
+            <br>
+            <p>
+              <h4>Tracking a local project</h4>
+              A local project is a project on our system. It could be a calculator we are trying to build or a new algorithm we are trying to perfect, as long as it's on our system, it's a local project<br>
+            </p>
+            <p>
+              <h6>To begin:</h6>
+              <ol>
+                <li>Go to the file directory of your choice project</li>
+                <li>Right-click</li>
+                <li>Then click on [git bash here]</li>
+              </ol>
+              <img  class="img-fluid" src="img/git_basics/Git_bash.JPG" >
+            </p>
+
+            <p>
+              Once the terminal opens type <code>git init</code>
+              You'll notice, ".git/" has been added to the file path. 
+              <br>
+              <img  class="img-fluid" src="img/git_basics/git_init.JPG" >
+            </p>
+            <p class="bg-grey" style="background-color: #dbdbdb">
+              Note : if we want to stop tracking the project, we type <code> rm  –rf .git </code> 
+              This removes the git directory, thus we will no longer tracking the project.
+            </p>
+            <p>
+            <h5>Creating a file from the command line</h5>
+              Now with our repository initialized, lets  create some files in the directory/ repository.
+              To do this we create a file named random.txt by typing <code> touch random.txt</code> (We can also manually create a file).<br><br>
+               Let’s see if the file is in our directory.<br>
+               Type <code> ls  –la</code> to view the entire files in your directory.
+               <br><br>
+               Here's what i got<br>
+               <img  class="img-fluid" src="img/git_basics/ls-la.JPG" >
+            </p>
+            
+              <p>
+              <!-- after demo, do git ignore -->
+                  <h5>Now let's do a demo</h5>
+                We have previously created a file named random.txt. Let's see if it's being tracked.
+                 Type <code>git status</code> to check.
+                  <img  class="img-fluid" src="img/git_basics/git_status.JPG" >
+                  <br>
+                  From the above image, random.txt is not yet tracked (it is colored red).
+                  <p>
+                    Now to begin to track this file, let's add it to the staging area.
+                    We enter <code>git add random.txt</code> to do this
+                  </p>
+
+                  Once we run a git status, here's what we see.
+                   <img  class="img-fluid" src="img/git_basics/Git_touch_add.JPG" ><br>
+                   It has turned green meaning it is ready to be commmited.
+                   <br><br>
+                   To commit we type <code>git commit -m "Our first commit"</code>
+                   <img  class="img-fluid" src="img/git_basics/git_commit_2.JPG" ><br>
+                   Now we do not have modified and untracked files. Hence we have commited changes to the local directory
+              </p>
+            After a few practices, you will be ready to learn how to <a href="" style="color: #0085a1;">track an existing project on github</a> 
+
+            <!-- <p> IS OUR FILE TRACKED
+              <h5>Is our file tracked?</h5>
+            </p> -->
+            <!--
+            <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+
+            <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+
+            <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+
+            <p>Placeholder text by
+              <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
+              <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p> -->
+             
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>

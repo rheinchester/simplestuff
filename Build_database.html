@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Sample Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Building a database with phpmyadmin</h1>
+              <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+              <span class="meta">Posted by
+                <a href="#">Jacob Okoro</a>
+                on August 24, 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>
+              <h4>What is a database?</h4>   
+              A database is usually a collection of information and data that is organised so that it can be easily accessed, retrieved, managed and updated. Data in a database is usually organised into rows, columns and tables.
+              A database-management system is a means with which end-users interact with the database. It is a software application that aids to capture and analyse data. The database management system used here is MySQL.
+            </p>
+            <p>
+              <h4>What is phpMyadmin and how is it useful?</h4> 
+              phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB. Frequently used operations (managing databases, tables, columns, relations, indexes, users, permissions, etc) can be performed via the user interface, while you still have the ability to directly execute any SQL statement.
+            </p>
+            <p>
+              Before we continue with this tutorial:
+              <ul>
+                <li>Make sure you have wamp server or xampp installed and properly installed and configured</li>
+                <li> Download phpmyadmin<a href="https://www.phpmyadmin.net/">here</a>. In the site you see a green button at the top right corner (the version number is also inscribed on the button). It downloads as a zip folder.
+                  <img class="img-fluid" src="img/phpmyadmin/phpmyadmin_download.jpg">
+                </li>
+                <li>After download, to properly install it visit this  <a href="https://www.wikihow.com/Install-phpMyAdmin-on-Your-Windows-PC" style="color: #007bff;">site</a></li>
+              </ul>
+            </p>
+            <p>
+              <h4> Getting started. </h4> 
+              Now after installation, we can find phpmyAdmin in wampserver. To do this Run WAMP server as administrator by Right-clicking on the WAMP icon found in the desktop or in the start menu, (or search for WAMP on your system using the windows search bar), then select “Run as administrator. Click "Yes" on the "User Account Control" popup. 
+              <img class="img-fluid" src="img/phpmyadmin/run_wamp_admin.JPG" ><br><br>
+              After WAMP server has started running, you will notice the WAMP icon below in the notification panel at the bottom-right side of the desktop. 
+              <img class="img-fluid" src="img/phpmyadmin/wamp_notification.JPG" ><br><br>
+              If the icon is green, it means it means all services are running. If the icon is not green, left-click on it, as the admin panel comes up, click start all services
+              <img class="img-fluid" src="img/phpmyadmin/wamp_control_panel_1.png" >
+              <br>
+              Next, visit localhost on the browser (Enter <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> index.php on the browser). You’ll see this
+              <img class="img-fluid" src="img/phpmyadmin/php_homepage.JPG" >
+            </p>
+            <P>
+              Now, the username is usually “root” and the password is usually blank. <br>
+              If you want to change the username and password visit <a href="https://changing username and password phpmyadmin/ ">here</a>  
+              <br>
+              <h4>Creating New database</h4>
+              After logging in, we enter the index page. There we see Databases. Click on it.
+              <img class="img-fluid" src="img/phpmyadmin/phpenter_database.JPG" ><br>
+              After we have done so, we see the below
+              <img class="img-fluid" src="img/phpmyadmin/php_createdatabase.JPG" ><br>
+              Now in the “create database” field, enter any suitable name for your new database.<br>
+              For this example the name is “new_dbase”. Click on the create button. Leave the “collation” drop-down field as it is.
+              <br><br>
+              After creation, we see this
+               <img class="img-fluid" src="img/phpmyadmin/db_successful.JPG" ><br>
+               Now we have created our database. To store data in it we need to create <a style="color: #007bff;" href="" >tables</a> . 
+            </P>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>

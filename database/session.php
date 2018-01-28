@@ -28,7 +28,6 @@
 				$this->logged_in = true;
 			}
 		}
-
 		public function logout (){
 			$this->logged_in = false;
 			$this->user_id = null;

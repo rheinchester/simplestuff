@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,84 +58,68 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Clean Blog</h1>
-              <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            <div class="post-heading">
+              <h1>Man must explore, and this is exploration at its greatest</h1>
+              <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+              <span class="meta">Posted by
+                <a href="#">Start Bootstrap</a>
+                on August 24, 2017</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Science has not yet mastered prophecy
-              </h2>
-              <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2017</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>
+            <h5>Gow does git work? </h5>
+              There are three states that one needs ot know about
+              <ul>
+                <li>The working directory</li>
+                <li>The staging area (where files are tracked).</li>
+                <li>And the git directory(where our commited files are</li>
+              </ul>
+            </p>
+
+            <p>
+            <h6>The working directory</h6>
+              We are currently in the working directory. Untracked and modified files are in the working directory  (on entering <code>git status</code> the filename is coloured red). The name is self-explanatory. It means we are still working on the files and we aren't ready to commit it.
+              It is on the local machine
+            </p>
+            <p>
+             <h6>The staging area</h6>
+              Staging area is where we organize files that are about to be sent to the repository. 
+              As you are working on your project, there will reach a point where you are satisfied with your work.At that point, you would  want to save this version before you screw it up (I've learnt lessons).<br>
+              Here, to move it to the staging area, you use:<br>
+
+                <ul>
+                  <li><code>git add [filename]</code> for a single file</li>
+                  <li><code>git add [file1] [file2]</code> for two files </li>
+                  <li><code>git add .</code> or <code>git add –A</code> for all files </li>
+                </ul>
+               
+              It’s just like a loading dock where we decide which files we want to ship away.
+              Once files are added to the staging area, they are being tracked. On entering <code>git status</code> the filename turns green.
+            </p>
+            <p>
+              <h6>The third stage is the git repository</h6>
+              This is where the tracked files (the files added) are sent to the local directory and the changes are recorded locally.
+              When you are satisfied with all the added changes, you can then transfer this work to your local repository. We use <code>git commit</code> to do this.
+              <!-- Do more research on this -->
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </article>
 
     <hr>
 
@@ -181,3 +170,46 @@
   </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          

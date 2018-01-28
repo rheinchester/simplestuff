@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Please read up this part very wel -->
   <head>
 
     <meta charset="utf-8">
@@ -53,84 +53,58 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Clean Blog</h1>
-              <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            <div class="post-heading">
+              <h1>Relational database</h1>
+              <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+              <span class="meta">Posted by
+                <a href="#">Jacob okoro</a>
+                on August 24, 2017</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Science has not yet mastered prophecy
-              </h2>
-              <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2017</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+            <h4>What does Flat File Database mean? </h4>
+            A flat file database is a type of database that stores data in a single table. This is unlike a relational database, which makes use of multiple tables and relations. Flat file databases are generally in plain-text form, where each line holds only one record. The fields in the record are separated using delimiters such as tabs and commas.<br>
+            It is a database stored as an ordinary unstructured file called a "flat file". To access the structure of the data and manipulate it on a computer system, the file must be read in its entirety into the computer's memory. Upon completion of the database operations, the file is again written out in its entirety to the host's file system. In this stored mode the database is said to be "flat", meaning that it has no structure for indexing and there are usually no structural relationships between the records. A flat file can be a plain text file or a binary file.<br>
+            <br>
+            A flat file database stores data in a single table structure. A relational database uses multiple table structures, cross-referencing records between tables. Tables in both organize records in rows, with each column containing a single piece of data in the record.<br>
+            In any event, many call a Microsoft Word document that has been saved as text only a flat file.
+          </p>  
+
+
+          <p>
+            A flat database is a simple database system in which each database is represented as a single table in which all of the records are stored as single rows of data, which are separated by delimiters such as tabs or commas. The table is usually stored and physically represented as a simple text file. <br>
+
+            Because of the limitations of flat databases, they are not unsuitable for most software applications in which there is a need to represent and store complex business relationships. However, some application developers still use flat files in order to reduce the cost and complexity of integrating a relational database.<br>
+          </p>
+            
+          <p>
+            <h4>Flat File Database</h4> 
+            A flat file database is a database designed around a single table. The flat file design puts all database information in one table, or list, with fields to represent all parameters. A flat file may contain many fields, often, with duplicate data that are prone to data corruption. If you decide to merge data between two flat files, you need to copy and paste relevant information from one file to the other. There is no automation between flat files. If you have two or more flat files that contain client addresses, for example, and a client moved, you would have to manually modify the address parameters in each file that contains that client’s information. Changing information in one file has no bearing on other files. Flat files offer the functionality to store information, manipulate fields, print or display formatted information and exchange information with others, through email and over the Internet. Some flat files may be attached to external files, such as text editors, to extend functionality and manage related information.
+          </p>
+
+            
+            
+
+
+          </p>
           </div>
         </div>
       </div>
-    </div>
+    </article>
 
     <hr>
 
@@ -170,7 +144,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

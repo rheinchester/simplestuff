@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Sample Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Creating a database table with phpmyadmin</h1>
+              <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+              <span class="meta">Posted by
+                <a href="#">Start Bootstrap</a>
+                on August 24, 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+            <h4>Creating a table</h4> 
+            According to Wikipedia, A table is a collection of related data held in a structured format within a database. It consists of columns, and rows.<br>
+            Each row in a table represents a set of related data, and every row in the table has the same structure.<br>
+            In the context of relational databases, a column is a set of data values, all of a single type, in a table. <br>
+            For example, in a table that represents names of individuals in a class, a row represents a single student. While a columns represents the student’s attribute like, age, gpa, name, surname, address, etc.<br>
+
+            You’ll get a better understanding as we create the table.
+            <img  class="img-fluid" src="img/phpmyadmin/right_hand_corner.JPG">
+             <br>
+            Now looking at your left hand corner, you’ll see something similar to the image above.
+             After  left-clicking on the database you created (new_dbase), you’ll see this
+             <img  class="img-fluid" src="img/phpmyadmin/new_dbase_table.JPG">
+              
+
+            From the above, we intend to store the staff information of a company. We have created 6 columns for this. 
+
+            After clicking on go, you see these empty entries with no information. You can fill them with any suitable information of your choice.
+            <img  class="img-fluid" src="img/phpmyadmin/new_dbase_staff.JPG">
+             
+
+            For me these are what I entered. I shall enumerate them below
+             <img  class="img-fluid" src="img/phpmyadmin/filled_dbase_fields1.JPG">
+             <ul>
+               <li>Staff_id: Each staff will have their own specific number (as a unique identifier). For an id, we set the type as INT(integer).For the length we set it as 11, meaning the maximum number of digits used to represent this field is 11. We set the default value as none in all because….. You’ll also notice that A_I is ticked. A_I stands for auto-increment. This means that a unique number is generated automatically when a new record is inserted. E.g the first registered staff will have an id of 1. The next registered staff will have an id of 2. This allows staff_id to act as a primary key   (Since a unique number is generated). </li>
+               <li>Username: The username of the staff is of the type varchar. This means a mixture of text and numbers could be used. The default value is 255 (the username should not exceed 255 characters long). You could  specify the length with any figure of your choice.</li>
+               <li>Sign_up: I recommend using datetime rather than date as type. Datetime is used because we don’t just want the date of sign up, we also want the precise time of sign up -down to the second- along with the date. To select datetime, click on the caret-down button. Hit “d” until you see datetime</li>
+               <li>Email: We leave it as varchar because we want a mix of text and numbers. The default value like username and for the same reason is 255.</li>
+               <li>Bio: we leave the type as text because it can hold greater number of characters than varchar. If you want an greater number of characters, use long text.</li>
+               <li>Email_activation: Whenever anybody signs up, their email is set to zero as the default. Once they click on an email activation link, it switches to a one. This means that for you to have an active account and do stuff on your account you need an email of one. To change to “as defined”, click on the caret-down button- you’ll see “as defined” as an option.</li>
+             </ul>
+            
+            Say you made a mistake and you want to add one more entry,
+              <img  class="img-fluid" src="img/phpmyadmin/add_more.JPG">
+            Go to the top of the page, where you see something similar to the above, specify the amount of columns you want to add, click go.<br>
+
+            Now we are done, move to the bottom of the page and click on save
+              <img  class="img-fluid" src="img/phpmyadmin/Save_table.JPG">
+            Here’s our table 
+               <img  class="img-fluid" src="img/phpmyadmin/staff_table_created.JPG">
+            If you want to view data in the table, click on browse. Here’s what we see when we do so 
+            <img  class="img-fluid" src="img/phpmyadmin/staff_table_browse.JPG"><br>
+            Here we see that no data has been entered.
+             <br><br>
+            Say we have some data and we want to search the table simply click on search. You’ll see this 
+             <img  class="img-fluid" src="img/phpmyadmin/staff_table_search.JPG">
+            Say you have some sql experience and you want to run an sql command, directly on the site (which I do for debugging purposes, simply click on sql.
+              <img  class="img-fluid" src="img/phpmyadmin/staff_table_sql1.JPG">
+            The same also follows for export, import, and so on.
+            You’ll see this 
+             <img  class="img-fluid" src="img/phpmyadmin/staff_table_sql2.JPG">
+            When you’re done running your sql query, click on “Go” at the bottom right corner. 
+
+          </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>

@@ -53,84 +53,64 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Clean Blog</h1>
-              <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            <div class="post-heading">
+              <h1>Creating a database Connection with my pdo </h1>
+              <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+              <span class="meta">Posted by
+                <a href="#">Jacob okoro</a>
+                on August 24, 2017</span>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Science has not yet mastered prophecy
-              </h2>
-              <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2017</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+          <h1 style="color: red">To be continued</h1>
+            <h4>Creating a database Connection with my pdo </h4>          
+            There are two ways of accessing the database, PDO and my_sqli. You could use which ever you like. Both have their advantages.<br>
+            <ul>
+              <li>PDO will work on 12 different database systems, whereas MySQLi will only work with MySQL databases.</li>
+              <li> So, if you have to switch your project to use another database, PDO makes the process easy.You only have to change the connection string and a few queries.With MySQLi on the other hand, you will need to rewrite the entire code - queries included.</li>
+              <li>Mysqli has both OOP and procedural. While my pdo only offers OOP.</li>
+              <li> Both support Prepared Statements. Prepared Statements protect from SQL injection, and are very important for web application security.</li>
+              <li>For me the best benefit of PDO is that it has an exception class to handle any problems that may occur in our database queries. If an exception is thrown within the try{ } block, the script stops executing and flows directly to the first catch(){ } block.</li>
+            </ul>
+          </p>
+          <p>
+            To continue this tutorial, you need to install<a href="http://php.net/manual/en/pdo.installation.php"> PDO.</a>
+            Also You need to ensure that you have <a href="">created a database</a> 
+          </p>
+          <p>
+            Look at this code:
+            <img  class="img-fluid" src="img/Db_conn_PDO/DB_PDO.JPG">
+            Save the above code as MyPDO.php
+            Now I shall explain the code step by step.
+            First we created a list of variables that saved our:
+            <ul>
+              <li>hosting server($host) as “localhost”, </li>
+              <li>our database name($dbname) “new_dbase”, </li>
+              <li>database username($user) as root,</li>
+              <li>password($password) as an empty string.</li>
+              <li>Data source name (dsn) as "mysql:host=localhost;dbname=new_dbase;charset=utf8".<br> This gives information on the database we are connecting to. Ensure that your variables are in double quotes so that they can be read as part of the dsn.
+            </li>
+            </ul>
+            
+          </p>
           </div>
         </div>
       </div>
-    </div>
+    </article>
 
     <hr>
 
@@ -170,7 +150,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

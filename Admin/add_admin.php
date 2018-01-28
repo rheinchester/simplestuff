@@ -19,7 +19,6 @@
           $msg = 'Failed to create Admin.';
         }
       }
-
  include_once 'Admin_header.php'; 
  ?>
 

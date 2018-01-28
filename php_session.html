@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Sample Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Working with sessions in php</h1>
+              <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+              <span class="meta">Posted by
+                <a href="#">Start Bootstrap</a>
+                on August 24, 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+          <h4>Php session</h4>
+           <p>
+              It is an alternative way to make data accessible across the various pages of an entire website.
+            A session creates a file in a temporary directory on the server where registered session variables and their values are stored. This data will be available to all pages on the site during that visit. 
+            If you want to access the location of this temporary file open your php_info file  look for a setting called session.save_path. Before using any session variable make sure you have setup this path.
+           </p>
+           <p>
+            Here’s what happens when you start a session,
+            <ul>
+              <li>PHP first saves a unique identifier for that particular session as a random string of 32 hexadecimal numbers 9b7eoj74c3hj973hjkop2kc936e3547</li>
+              <li>A cookie called PHPSESSID is automatically sent to the user's computer to store unique session identification string.</li>
+              <li>A file is automatically generated on the server. It is saved on a temporary directory and it bears the name of the unique identifier prefixed by sess_  (e.g sess_9b7eoj74c3hj973hjkop2kc936e3547)</li>
+            </ul>
+           </p>
+           <p>
+             When one intends  to obtain the value from a session variable, PHP automatically gets the identifier string from the PHPSESSID cookie and then looks in its temporary directory for the file bearing that name and a validation can be done by comparing both values.
+           </p>
+            <p>
+              A session ends when the user loses the browser or after leaving the site, the server will terminate the session after a predetermined period of time, commonly 30 minutes duration.
+            Starting a session
+            </p>
+            <p>
+              Before you do anything with session data
+              <img class="img-fluid" src="img/php_session/session_start.JPG" alt="">
+            </p>
+            <p>
+              Enter a session start as above. It has to be the first thing at the top of a page before you do anything involving session data. If you attempt to collect data above session_start(), It will not work because session has to start before we do anything with it. To store a variable in a session it has to bw stored as an associative array  in the form,
+              <img class="img-fluid" src="img/php_session/session_store.JPG" alt=""><br>
+               With this, information in this page can be used in all other pages as long as the session is alive. 
+            </p>
+            <p>
+              <h5>During a session</h5>
+            To access info from this page, here what we can do  
+            <img class="img-fluid" src="img/php_session/session_echo.JPG" alt=""><br>
+            You see that the info has been transferred from page1.php to page2.php?<br>
+            This is how amazon builds your shopping cart, and facebook recognises it’s you online, and a certain website remembers your preference from a previous moment (as long as you are logged in).
+            </p>
+            <p>
+              From the above code (fig4), first the session is started, then it checks if $_SESSION has been set, if this has been set, it then echo’s it.
+            </p>
+            
+            <p>
+              <h5>Ending a session</h5>
+              To end a session two commands are involved,
+              unset() and session_destroy().
+              Unset cleans up a single variable e.g<br>
+              <img class="img-fluid" src="img/php_session/session_unset1.JPG" alt="">
+            </p>
+            From the above we have unset the variable name. if you try to echo $name 
+            <img class="img-fluid" src="img/php_session/session_unset2.JPG" alt=""><br>
+            You get this message indicating that the variable isn’t defined  
+              <img class="img-fluid" src="img/php_session/session_unset_error.JPG" alt=""> 
+            <p>
+              
+              
+              
+            </p>
+           
+            <p>
+              Now if you destroy a session,<br>
+              It means you kill not just a particular variable, but all the variable stored for that particular session. This means that you have reset your session.
+            </p>
+           <p>
+            Here’s the command <br>
+             <img class="img-fluid" src="img/php_session/session_destroy.JPG" alt="">
+           </p>
+
+           <p>
+           <h5>How facebook stores your info for a really long time</h5> 
+             
+           </p>
+           <p>
+            Since session info is temporary(30 min lifespan), How is your preferences stored on facebook for a really long time, <br>
+            This is where a cookie comes in. It stores that info on your computer. The next time you log into facebook , an authentication is carried out between the session_id on your computer and that on the server, once it’s a match the server will be able to access info on the cookie. <br>
+            But say the site wants to store this for a really long time on it’s server (possibly permanently),
+            It will store the data in a database.
+           </p>
+          </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
