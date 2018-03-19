@@ -2,7 +2,7 @@
 
 ## About AEIOU
 
-[![Aeiou Logo](https://wiki.sugarlabs.org/go/File:AEIOUicon.png)]
+[![Aeiou Logo](https://wiki.sugarlabs.org/images/8/8b/AEIOUicon.png)]
 
 AEIOU is an activity for introducing the Spanish vowels. It displays letters and images and associated sound files, such as 'A as in ave'. There are four modes:
 

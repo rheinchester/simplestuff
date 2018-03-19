@@ -5,19 +5,19 @@ someone without a background in computer science
 # Preview
 [![Simple developer Preview](http://res.cloudinary.com/dmyow6n0v/image/upload/v1515514123/Simple-dev_ibbv4f.jpg)]
 
-1. click on the letter to hear its name
-1. click on the picture to hear the name of the first letter in the word represented by the picture
-1. hear a letter name, then click on the corresponding letter
-1. hear a letter name, then click on the corresponding picture
-
 
 # Activities/AEIOU
 
 ## About AEIOU
 
-[![Aeiou Logo](https://wiki.sugarlabs.org/go/File:AEIOUicon.png)]
+[![Aeiou Logo](https://wiki.sugarlabs.org/images/8/8b/AEIOUicon.png)]
 
 AEIOU is an activity for introducing the Spanish vowels. It displays letters and images and associated sound files, such as 'A as in ave'. There are four modes:
+
+1. click on the letter to hear its name
+1. click on the picture to hear the name of the first letter in the word represented by the picture
+1. hear a letter name, then click on the corresponding letter
+1. hear a letter name, then click on the corresponding picture
 
 
 
