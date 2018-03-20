@@ -71,4 +71,4 @@ There is a language-specific database file maintained in ./lessons/??/alphabet.c
 
 letter | word| color (#RRGGBB)| image file| sound file (image)| sound file (letter)
 ------------ | -------------| -------------| -------------| -------------| -------------
-    R |     (r)atón|     #F08020|     raton.png|    raton.ogg|     r.ogg
+R |(r)atón|#F08020|raton.png|raton.ogg|r.ogg
