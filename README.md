@@ -29,3 +29,5 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 **picture game**
 
 
+### **Toolbars**
+![letter game](https://wiki.sugarlabs.org/images/b/b0/AEIOUToolbar.png)
