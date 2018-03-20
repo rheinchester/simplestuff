@@ -30,5 +30,5 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 
 ## Using AEIOU
 
-![letter game](https://wiki.sugarlabs.org/go/File:AEIOU.png#/media/File:AEIOU.png) *letter game*  ![picture game](https://wiki.sugarlabs.org/images/a/a6/AEIOU2.png)*picture game*
+![letter game](https://wiki.sugarlabs.org/images/7/70/AEIOU.png=20x20) *letter game*  ![picture game](https://wiki.sugarlabs.org/images/a/a6/AEIOU2.png=20x20)*picture game*
 
