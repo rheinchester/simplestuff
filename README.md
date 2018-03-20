@@ -35,27 +35,27 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 
 #### **Activity toolbar**
 
-&nbsp; change the activity name; add notes to the Sugar Journal
+&nbsp;&nbsp;  change the activity name; add notes to the Sugar Journal
 
 #### **Letter mode**
 
-    listen to letter names
+&nbsp;&nbsp; listen to letter names
 
 #### **Picture mode**
 
-    listen to letter names associated with pictures
+&nbsp;&nbsp; listen to letter names associated with pictures
 
 #### **Find the letter 1**
 
-    hear a letter spoken and then find it
+&nbsp;&nbsp; hear a letter spoken and then find it
 
 #### **Find the letter 2**
 
-    hear a word spoken and then find the first letter
+&nbsp;&nbsp; hear a word spoken and then find the first letter
 
 #### **Stop button**
 
-    exit the activity
+&nbsp;&nbsp; exit the activity
 
 ## Learning with AEIOU
 While far from contructionist, this activity does provide a mechanism for learning the alphabet.
