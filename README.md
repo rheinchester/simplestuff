@@ -23,6 +23,11 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 
 ## Using AEIOU
 
-![letter game](http://res.cloudinary.com/dmyow6n0v/image/upload/v1521528024/120px-AEIOU_cidpuw.png)*letter game*
-![picture game](http://res.cloudinary.com/dmyow6n0v/image/upload/v1521528140/120px-AEIOU2_o5hltp.png)*picture game*
+![letter game](http://res.cloudinary.com/dmyow6n0v/image/upload/v1521528024/120px-AEIOU_cidpuw.png)
+.caption[
+**Fig. 1:** letter game
+]
+![picture game](http://res.cloudinary.com/dmyow6n0v/image/upload/v1521528140/120px-AEIOU2_o5hltp.png)
+*picture game*
+
 
