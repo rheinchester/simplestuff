@@ -33,20 +33,36 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 ### **Toolbars**
 ![letter game](https://wiki.sugarlabs.org/images/b/b0/AEIOUToolbar.png)
 
-**Activity toolbar**
+#### **Activity toolbar**
+
 change the activity name; add notes to the Sugar Journal
 
-**Letter mode**
+#### **Letter mode**
+
 listen to letter names
 
-**Picture mode**
+#### **Picture mode**
+
 listen to letter names associated with pictures
 
-**Find the letter 1**
+#### **Find the letter 1**
+
 hear a letter spoken and then find it
 
-**Find the letter 2**
+#### **Find the letter 2**
+
 hear a word spoken and then find the first letter
 
-**Stop button**
+#### **Stop button**
+
 exit the activity
+
+## Learning with AEIOU
+While far from contructionist, this activity does provide a mechanism for learning the alphabet.
+
+## Modifying AEIOU
+As of Version 1, only a Spanish version is included. In order to add other languages, we need:
+
+audio recordings of the letter names
+audio recordings of the picture names
+perhaps additional pictures, in order ensure there is a picture for each letter of the alphabet
