@@ -10,7 +10,7 @@ someone without a background in computer science
 
 ## About AEIOU
 
-[![Aeiou Logo](https://wiki.sugarlabs.org/images/8/8b/AEIOUicon.png)]
+![Aeiou Logo](https://wiki.sugarlabs.org/images/8/8b/AEIOUicon.png)
 
 AEIOU is an activity for introducing the Spanish vowels. It displays letters and images and associated sound files, such as 'A as in ave'. There are four modes:
 
@@ -30,5 +30,6 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 
 ## Using AEIOU
 
-![letter game](https://wiki.sugarlabs.org/images/7/70/AEIOU.png =100x100) *letter game*  ![picture game](https://wiki.sugarlabs.org/images/a/a6/AEIOU2.png =100x100)*picture game*
+![letter game](https://wiki.sugarlabs.org/images/7/70/AEIOU.png ) *letter game*  
+![picture game](https://wiki.sugarlabs.org/images/a/a6/AEIOU2.png )*picture game*
 
