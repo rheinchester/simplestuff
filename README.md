@@ -72,3 +72,13 @@ There is a language-specific database file maintained in ./lessons/??/alphabet.c
 letter | word| color (#RRGGBB)| image file| sound file (image)| sound file (letter)
 ------------ | -------------| -------------| -------------| -------------| -------------
 R |(r)atón|#F08020|raton.png|raton.ogg|r.ogg
+
+## Extending AEIOU
+It would, of course, be fun to let the learner add their own pictures and sound recordings.
+
+## Where to report problems
+You are welcome to leave comments/suggestions on the [Talk:Activities/AEIOU](https://wiki.sugarlabs.org/index.php?title=Talk:Activities/AEIOU&action=edit&redlink=1) page.
+
+## Credits
+AEIOU was written and is maintained by [User:Walter](https://wiki.sugarlabs.org/go/User:Walter). He was inspired in part by the work of Maria Perez, Fundación Zamora Terán
+
