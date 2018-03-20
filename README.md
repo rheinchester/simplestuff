@@ -27,3 +27,8 @@ AEIOU is an activity for introducing the Spanish vowels. It displays letters and
 TheAEIOU activity is available for download from the [Sugar Activity Library](http://activities.sugarlabs.org/): [AEIOU](http://activities.sugarlabs.org/en-US/sugar/addon/4626)
 
 The source code is available [on the Sugar Labs Gitorious server.](http://git.sugarlabs.org/aeiou)
+
+## Using AEIOU
+
+![letter game](https://wiki.sugarlabs.org/go/File:AEIOU.png#/media/File:AEIOU.png) *letter game*  ![picture game](https://wiki.sugarlabs.org/images/a/a6/AEIOU2.png)*picture game*
+
