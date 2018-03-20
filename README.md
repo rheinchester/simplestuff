@@ -63,6 +63,12 @@ While far from contructionist, this activity does provide a mechanism for learni
 ## Modifying AEIOU
 As of Version 1, only a Spanish version is included. In order to add other languages, we need:
 
-audio recordings of the letter names
-audio recordings of the picture names
-perhaps additional pictures, in order ensure there is a picture for each letter of the alphabet
+*audio recordings of the letter names
+*audio recordings of the picture names
+*perhaps additional pictures, in order ensure there is a picture for each letter of the alphabet
+
+There is a language-specific database file maintained in ./lessons/??/alphabet.csv where ?? is the 2-digit language code. The format of the CSV file is:
+
+letter | word| color (#RRGGBB)| image file| sound file (image)| sound file (letter)
+------------ | -------------| -------------| -------------| -------------| -------------
+R | (r)atón| #F08020| raton.png|raton.ogg| r.ogg
