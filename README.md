@@ -32,3 +32,16 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 
 ### **Toolbars**
 ![letter game](https://wiki.sugarlabs.org/images/b/b0/AEIOUToolbar.png)
+
+**Activity toolbar**
+change the activity name; add notes to the Sugar Journal
+**Letter mode**
+**listen to letter names**
+**Picture mode**
+listen to letter names associated with pictures
+**Find the letter 1**
+hear a letter spoken and then find it
+**Find the letter 2**
+hear a word spoken and then find the first letter
+**Stop button**
+exit the activity
