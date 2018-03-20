@@ -35,7 +35,7 @@ The source code is available [on the Sugar Labs Gitorious server.](http://git.su
 
 #### **Activity toolbar**
 
-    change the activity name; add notes to the Sugar Journal
+ change the activity name; add notes to the Sugar Journal
 
 #### **Letter mode**
 
