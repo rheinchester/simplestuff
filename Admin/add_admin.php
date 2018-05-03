@@ -1,10 +1,10 @@
 <?php 
   // include_once('header_template.php');
 // 'admin_id','username','phone','email','address','status','password'
-      include_once "../database/Admin.php";
-      include_once ('../database/session.php');
-      include_once ('../database/function.php'); 
-      if(!$session->is_logged_in()) redirect('logout.php');
+      include_once "../assets/database/Admin.php";
+      include_once ('../assets/database/session.php');
+      include_once ('../assets/database/function.php'); 
+      // if(!$session->is_logged_in()) redirect('../index.php');
       $msg = '';
       if(isset($_POST['submit'])){
         $admin = Admin::instantiate($_POST);
@@ -44,7 +44,7 @@
             <div class="control-group">
               <div class="form-group floating-label-form-group controls">
                 <label>Name</label>
-                <input type="text" class="form-control" placeholder="Name" name="username" id="name" required data-validation-required-message="Please enter your name.">
+                <input name="username" type="text" class="form-control" placeholder="Name"  id="name" required data-validation-required-message="Please enter your name.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>

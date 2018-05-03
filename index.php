@@ -1,8 +1,40 @@
 <?php
   include_once 'header.php';
   ?>
+  <!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="avatar">
+          <img src="/examples/images/avatar.png" alt="Avatar">
+        </div>        
+        <h4 class="modal-title">Member Login</h4> 
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form action="Login.php" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" name="email" placeholder="Email" required="required">   
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required"> 
+          </div>        
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg btn-block login-btn" name="init">Login</button>
+          </div>
+          <a href="sign_up.php" class="modal-footer" style="text-decoration: none;"> Sign up here!</a>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#">Forgot Password?</a> 
+      </div>
+    </div>
+  </div>
+</div>     
+
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -15,7 +47,7 @@
         </div>
       </div>
     </header>
-
+    
     <!-- Main Content -->
     <div class="container">
       <div class="row">
@@ -138,11 +170,12 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="assets/js/clean-blog.min.js"></script>
+    
 
   </body>
 

@@ -1,73 +1,46 @@
 <?php 
-     include_once '../header.php';
-    include_once '../database/Article.php';
-    include_once '../database/Category.php';
-    include_once ('../database/admin.php');
-    include_once ('../database/session.php');
-    include_once ('../database/function.php'); 
+     // include_once '../header.php';
+    include_once '../assets/database/Article.php';
+    include_once '../assets/database/Category.php';
+    include_once ('../assets/database/admin.php');
+    include_once ('../assets/database/session.php');
+    include_once ('../assets/database/function.php'); 
   if(!$session->is_logged_in()) redirect('logout.php');//create logout
     $article = new Article();
   if(isset($_GET['id'])){
     $article = Article::find($_GET['id']);
+    $category = Category::find($article->cat_id);
+  } else {
+    redirect('dashboard.php');
   }
-  if (isset($_GET['id'])) {
-   $category = Category::find($article->cat_id);
-  }
+
   if(isset($_POST['submit'])){
-    $article = Article::instantiate($_POST);
-    if(Article::find($article->getArticleId())) {
-      ($article->update()) ? $msg = 'Successful': $msg = 'Failed';//create update
+    $new_article = Article::instantiate($_POST);
+    if($article->getArticleId()) {
+      $new_article->setArticleId($article->getArticleId());
+      // var_dump($new_article); exit();
+      ($new_article->update()) ? $msg = 'Successful': $msg = 'Failed';//create update
     } 
-    var_dump($article);
+    // var_dump($article);
   }
+  include_once 'admin_header.php';
  ?>
 
 <!-- Template for creating additional pages -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Palmline | Create Customer </title>
-  <link rel="stylesheet" href="advanced/css/base.css">
-  <link rel="stylesheet" href="advanced/css/style.css">
-  <script src="advanced/js/modernizr.js"></script>
-  <!-- icomoon.com -->
-  <link rel="stylesheet" href="css/icomoon/demo-files/demo.css">
-  <link rel="stylesheet" href="css/icomoon/style.css">
+<header class="masthead" style="background-image: url('assets/img/contact-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Article</h1>
+              <span class="subheading">Share your story</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="../css/mysite_.css">
-  <link rel="stylesheet" type="text/css" href="../css/font-awesome/css/font-awesome.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src ="js/respond.js"></script>
-</head>
-<body class="bg-grey" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="../index.php">ADIC</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <!--   <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#contact">CONTACT</a></li> -->
-        <li><a href="logout.php">LOG OUT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 <div id="wrapper">
     
     <div id="header">
@@ -80,55 +53,40 @@
     </div><!-- #footer -->
     
   </div><!-- #wrapper -->
-     <div class='row'>
-        <article class='col col-lg-9 col-md-8 col-sm-9'>      
-          <section class='row'>
-          <div class='row'>
-            <h1 class="col-lg-offset-4 col-md-offset-6 col-sm-offset-4 text-center">Edit Article</h1>
-          </div> 
-           <br>
-          <div class="col-lg-offset-4 col-md-offset-5 col-sm-offset-3    ">
-             <form enctype = "multipart/form-data" class='form-horizontal' action='Edit_article.php' method='post'>
-              <div class='form-group'>
-                <label class='control-label col col-lg-4'>Topic</label>
-                <div class='col col-lg-6'>
-                  <input class='form-control' name='topic' type='text' value="<?php echo $article->topic;?>">
+  <div class="container">
+     <div class='row'>    
+          <div class="col-lg-8 col-md-10 mx-auto">
+             <form enctype = "multipart/form-data" class='form-horizontal' action='Edit_article.php?id=<?php echo $article->getArticleId(); ?>' method='post'>
+              <div class="control-group">
+                <div class='form-group floating-label-form-group controls'>
+                  <label >Topic</label>
+                    <input placeholder="Topic" class='form-control' name='topic' type='text' id="name" data-validation-required-message="Please enter the topic" value="<?php echo $article->topic?>" required>
+                    <p class="help-block text-danger" ></p>
                 </div>
               </div>
             
-              <div class='form-group'>
-                <label class='control-label col col-lg-4'>category</label>
-                <div class='col col-lg-6'>
-                  <?php echo Category::getDropDown(); ?>
+              <div class="control-group">
+                <div class='form-group floating-label-form-group '>
+                    <label class="control-label">category</label>
+                      <?php echo Category::getDropDown(); ?>
+                    <p class="help-block text-danger"></p>
                 </div>
               </div>
               
-              <div class='form-group'>
-                <label class='control-label col col-lg-4'>Headline</label>
-                <div class='col col-lg-6'>
-                  <textarea class='form-control ' name='headline' placeholder="Headline" value='<?php echo $article->headline;?>'></textarea>
+              <div class="control-group">
+                <div class='form-group floating-label-form-group control'>
+                  <label>Headline</label>
+                    <textarea class="tinymce form-control" row="5"     name='headline' placeholder="Please write your article here" value='<?php echo $article->headline?>'></textarea>
                 </div>
               </div>
-
-
-              
-              <div class='form-group'>
-                <label class='control-label col col-lg-4'>Images</label>
-                <div class='col col-lg-6'>
-                  <input class='form-control' name='image' type='file' value='<?php echo $article->image; ?>'>
-                </div>
-              </div>
-
 
               <div class='col col-lg-6 col-lg-offset-4'>
-                <button type='submit' name='submit' class ='btn btn-primary'>Create article</button>
+                <button type='submit' name='submit' class ='btn btn-primary'>Edit article</button>
               </div>
             </form> 
           </div>
-          </section>       
-        </article>
       </div>
-            
+    </div>            
     <div id="wrapper">
     
     <div id="header">
@@ -142,5 +100,5 @@
     
   </div><!-- #wrapper -->
  <?php 
- // include_once('../footer.php');
+ include_once('footer.php');
  ?>

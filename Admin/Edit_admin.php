@@ -1,10 +1,10 @@
 <?php 
-    include_once '../header.php';
-    include_once ('../database/Admin.php');
-    include_once ('../database/session.php');
-    include_once ('../database/function.php'); 
+    // include_once '../header.php';
+    include_once ('../assets/database/Admin.php');
+    include_once ('../assets/database/session.php');
+    include_once ('../assets/database/function.php'); 
     $msg = "";
-    if(!$session->is_logged_in()) redirect('logout.php');
+    // if(!$session->is_logged_in()) redirect('logout.php');
     $admin = new Admin();
   if(isset($_GET['id'])){
     $admin = Admin::find($_GET['id']);
@@ -15,94 +15,63 @@
       ($admin->update()) ? $msg = 'Successful': $msg = 'Failed';
     } 
   }
-  include_once 'Admin_header.php';
+include 'Admin_header.php'; 
  ?>
-
-<!-- Template for creating additional pages -->
- <div id="wrapper">
-    
-    <div id="header">
-    </div><!-- #header -->
-    
-    <div id="content">
-    </div><!-- #content -->
-    
-    <div id="footer">
-    </div><!-- #footer -->
-    
-   </div><!-- #wrapper -->
-    <div class="container">
-        <div>
-          <?php echo $msg;  ?>
-        </div>
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-<!-- what is mx-auto? -->
-          <h2>Edit admin details</h2>
-          <form  action='Edit_admin.php' method='post'>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Name</label>
-                 <input class='form-control' name='username' type='text' placeholder="User name" value='<?php echo $admin->username; ?>'">
-                <p class="help-block text-danger"></p>
+    <header class="masthead" style="background-image: url('assets/img/contact-bg.jpg')">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                  <h1>Admin</h1>
+                  <span class="subheading">Edit admin</span>
+                </div>
               </div>
             </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Email Address</label>
-                <input type="email" class="form-control" name="email" placeholder="Email Address" value="<?php echo $admin->email; ?>" id="email" required data-validation-required-message="Please enter your email address.">
-                <p class="help-block text-danger"></p>
+          </div>
+        </header>
+
+          <div class='container'>
+            <div class='row'> 
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <form  class='form-horizontal' action='Edit_admin.php' method='post'>
+                  <div class="control-group">
+                    <div class='form-group floating-label-form-group controls'>
+                      <label>Admin Id</label>
+                      <input name='admin_id' value='<?php echo $admin->admin_id; ?>' class='form-control'  type='text' placeholder="Admin ID" >
+                    </div>       
+                  </div>       
+                  <div class="control-group">
+                    <div class='form-group floating-label-form-group controls'>
+                      <label>Username</label>
+                      <input class='form-control' name='username' type='text' placeholder="User name" value='<?php echo $admin->username; ?>'">
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class='form-group floating-label-form-group controls'>
+                      <label>email</label>
+                       <div class='col col-lg-9 col-md-9 col-sm-9 col-xs-9'>
+                        <input class='form-control' name='email' type='email' placeholder="Email" value='<?php echo $admin->email; ?>'>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <div class='form-group floating-label-form-group controls'>
+                      <label>Phone</label>
+                      <input class='form-control' name='phone' type='text' placeholder="Phone" value='<?php echo $admin->phone; ?>'>
+                    </div>
+                  </div>
+                  <br>
+                  
+                   <div class='col col-lg-6 col-lg-offset-4'>
+                    <button type='submit' name='submit' class ='btn btn-primary'>Edit Admin</button>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Phone Number</label>
-                <input type="tel" class="form-control" name="phone" value="<?php echo $admin->phone; ?>" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            
-            <br>
-            <div id="success"></div>
-            <div class="form-group">
-              <button type="submit" name='submit' class="btn btn-primary" >Send</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-            
-          
-    <div id="wrapper">
-    
-    <div id="header">
-    </div><!-- #header -->
-    
-    <div id="content">
-    </div><!-- #content -->
-    
-    <div id="footer">
-    </div><!-- #footer -->
-    
-  </div><!-- #wrapper -->
-        </article>
-
-
-
-
-    <div id="wrapper">
-    
-    <div id="header">
-    </div><!-- #header -->
-    
-    <div id="content">
-    </div><!-- #content -->
-    
-    <div id="footer">
-    </div><!-- #footer -->
-    
-  </div><!-- #wrapper -->
-<!--  <?php 
- // include_once('../footer.php');
- ?> -->
+          </div>
+ 
+ <?php 
+ include_once('footer.php');
+ ?>
