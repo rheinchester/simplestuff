@@ -14,7 +14,7 @@
     if ($article->save_with_file()) {
       $msg = "Successful";
     } else{
-      $article->preparedCreate();
+      $article->preparedCreate(); 
     }
      // var_dump($article);
     
